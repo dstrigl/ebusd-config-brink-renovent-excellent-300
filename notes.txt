@@ -1,0 +1,16 @@
+Diagnose Info
+=============
+
+003c4050011c / 0a0144000007d000010144 = 1  ==>  0x0144
+    = 324 * 1000 = 324000
+003c40500122 / 0a000400007fff00010000 = 1  ==>  0x0004
+    = 4 ==> 90 - 4 = 86 Verbleibende Tage bis Filterwechsel
+003c40500123 / 0a000500007fff00010000 = 1  ==>  0x0005
+    = 5 * 1000 = 5000 ==> 324000 - 5000 = 319000 Verbleibende Luftmenge bis Filterwechsel
+
+
+Fehlerliste
+===========
+
+003c40900100 / 12030000000000000000000000000000000000 = 2
+    Kein Fehler, keine Filtermeldung
