@@ -1,6 +1,10 @@
 #!/bin/bash
 
 ebusctl reload
+echo "reloading config, may take 8 seconds"
+sleep 8
+echo "should be ready now"
+read -n1 -r -p "Press any key to start" key
 
 echo "SoftwareVersion"
 ebusctl read -f SoftwareVersion
