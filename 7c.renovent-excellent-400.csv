@@ -1,110 +1,116 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment,field2,part (m/s),datatypes/templates,divider/values,unit,comment,field3,part (m/s),datatypes/templates,divider/values,unit,comment,field4,part (m/s),datatypes/templates,divider/values,unit,comment,field5,part (m/s),datatypes/templates,divider/values,unit,comment
+# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment,field2,part (m/s),datatypes/templates ,divider/values,unit,comment,field3,part (m/s),datatypes/templates,divider/values,unit,comment,field4,part (m/s),datatypes/templates,divider/values,unit,comment,field5,part (m/s),datatypes/templates,divider/values,unit,comment
+### BRINK RENOVENT EXCELLENT 300 & 400 (plus)
+##
+## This ebus config may work for Ubbink, VisionAIR, WOLF CWL series and some other systems that are identical
+## You may need to modify the 7c address in the next 2 lines for your brand/model. Or just uncomment the necessary lines.
+
+## Renovent Excellent 400 (plus) series
+*r,kwl,,,,7c,4050,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+*w,kwl,,,,7c,4050,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+## Renovent Excellent 300 series
+## *r,kwl,,,,3c,4050,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+## *w,kwl,,,,3c,4050,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
 #### AKTUELLE KONFIGDATEN ####
-r2,kwl,LuftmengeStufe0,,,7c,4050,21,aktuell,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,Schrittgroesse,,UIR,,m³/h,,Werkseinstellung,,UIR,,m³/h,
-r2,kwl,LuftmengeStufe1,,,7c,4050,01,aktuell,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,Schrittgroesse,,UIR,,m³/h,,Werkseinstellung,,UIR,,m³/h,
-r2,kwl,LuftmengeStufe2,,,7c,4050,02,aktuell,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,Schrittgroesse,,UIR,,m³/h,,Werkseinstellung,,UIR,,m³/h,
-r2,kwl,LuftmengeStufe3,,,7c,4050,03,aktuell,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,Schrittgroesse,,UIR,,m³/h,,Werkseinstellung,,UIR,,m³/h,
-r2,kwl,BypassTemperatur,,,7c,4050,04,aktuell,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,Schrittgroesse,,SIR,10,°C,,Werkseinstellung,,SIR,10,°C,
-r2,kwl,BypassHysterese,,,7c,4050,30,aktuell,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,Schrittgroesse,,SIR,10,°C,,Werkseinstellung,,SIR,10,°C,
-# r2,kwl,Bypassbetrieb,,,7c,4050,1b,aktuell,,UIR,,,,minimum,,UIR,,,,maximum,,UIR,,,,Schrittgroesse,,UIR,,,,Werkseinstellung,,UIR,,,
-r2,kwl,Bypassbetrieb,,,7c,4050,1b,data,,UIR,0=auto;1=geschlossen;2=geöffnet
-# r2,kwl,ZentralheizungWRG,,,7c,4050,07,aktuell,,UIR,,,,minimum,,UIR,,,,maximum,,UIR,,,,Schrittgroesse,,UIR,,,,Werkseinstellung,,UIR,,,
-r2,kwl,ZentralheizungWRG,,,7c,4050,07,data,s,UIR,0=AUS;1=EIN
-# r2,kwl,UngleichgewichtMoeglich,,,7c,4050,08,aktuell,,UIR,,,,minimum,,UIR,,,,maximum,,UIR,,,,Schrittgroesse,,UIR,,,,Werkseinstellung,,UIR,,,
-r2,kwl,UngleichgewichtMoeglich,,,7c,4050,08,data,s,UIR,0=nicht zulaessig;1=zulaessig
-r2,kwl,StaendigesUngleichgewicht,,,7c,4050,09,aktuell,,SIR,,m³/h,,minimum,,SIR,,m³/h,,maximum,,SIR,,m³/h,,Schrittgroesse,,SIR,,m³/h,,Werkseinstellung,,SIR,,m³/h,
-r2,kwl,RHSensorVorhanden,,,7c,4050,32,aktuell,,UIR,,,,minimum,,UIR,,,,maximum,,UIR,,,,Schrittgroesse,,UIR,,,,Werkseinstellung,,UIR,,,
-r2,kwl,RHSensorEmpfindlichkeit,,,7c,4050,33,aktuell,,SIR,,,,minimum,,SIR,,,,maximum,,SIR,,,,Schrittgroesse,,SIR,,,,Werkseinstellung,,SIR,,,
-r2,kwl,BeleuchtungDisplay,,,7c,4050,1d,aktuell,,UIR,,%,,minimum,,UIR,,%,,maximum,,UIR,,%,,Schrittgroesse,,UIR,,%,,Werkseinstellung,,UIR,,%,
-r2,kwl,VorheizRegister_inst,,,7c,4050,31,data,,UIR,1=ja;0=nein,, ,,,,,,,,,,,,,,,,,,,,,,,,,
+r9,,LuftmengeStufe0,,,,4050,21,aktuell,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,Schrittgroesse,,UIR,,m³/h,,Werkseinstellung,,UIR,,m³/h
+r9,,LuftmengeStufe1,,,,4050,01,aktuell,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,Schrittgroesse,,UIR,,m³/h,,Werkseinstellung,,UIR,,m³/h
+r9,,LuftmengeStufe2,,,,4050,02,aktuell,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,Schrittgroesse,,UIR,,m³/h,,Werkseinstellung,,UIR,,m³/h
+r9,,LuftmengeStufe3,,,,4050,03,aktuell,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,Schrittgroesse,,UIR,,m³/h,,Werkseinstellung,,UIR,,m³/h
+r9,,BypassTemperatur,,,,4050,04,aktuell,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,Schrittgroesse,,SIR,10,°C,,Werkseinstellung,,SIR,10,°C
+r9,,BypassHysterese,,,,4050,30,aktuell,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,Schrittgroesse,,SIR,10,°C,,Werkseinstellung,,SIR,10,°C
+r9,,Bypassbetrieb,,,,4050,1b,aktuell,,UIR,0=auto;1=geschlossen;2=geoeffnet,,,minimum,,UIR,,,,maximum,,UIR,,,,Schrittgroesse,,UIR,,,,Werkseinstellung,,UIR
+r9,,ZentralheizungWRG,,,,4050,07,aktuell,s,UIR,0=aus;1=ein,,,minimum,,UIR,,,,maximum,,UIR,,,,Schrittgroesse,,UIR,,,,Werkseinstellung,,UIR
+r9,,UngleichgewichtMoeglich,,,,4050,08,aktuell,s,UIR,0=nicht zulaessig;1=zulaessig,,,minimum,,UIR,,,,maximum,,UIR,,,,Schrittgroesse,,UIR,,,,Werkseinstellung,,UIR
+r9,,StaendigesUngleichgewicht,,,,4050,09,aktuell,,SIR,,m³/h,,minimum,,SIR,,m³/h,,maximum,,SIR,,m³/h,,Schrittgroesse,,SIR,,m³/h,,Werkseinstellung,,SIR,,m³/h
+r9,,RHSensorVorhanden,,,,4050,32,aktuell,,UIR,,,,minimum,,UIR,,,,maximum,,UIR,,,,Schrittgroesse,,UIR,,,,Werkseinstellung,,UIR,,
+r9,,RHSensorEmpfindlichkeit,,,,4050,33,aktuell,,SIR,,,,minimum,,SIR,,,,maximum,,SIR,,,,Schrittgroesse,,SIR,,,,Werkseinstellung,,SIR
+r9,,BeleuchtungDisplay,,,,4050,1d,aktuell,,UIR,,%,,minimum,,UIR,,%,,maximum,,UIR,,%,,Schrittgroesse,,UIR,,%,,Werkseinstellung,,UIR,,%
+r9,,VorheizRegister_inst,,,,4050,31,aktuell,,UIR,1=ja;0=nein
 
 #### FILTER UND LAUFZEITEN ####
-r9,kwl,TageMitFilter,01,,7c,4050,22,data,,UIR,,bei 90 Tagen kommt Filterwarnung ,,,,,,,,,,,,,,,,,,,,,,,,,
-r9,kwl,LuftmengeMitFilter,01,,7c,4050,23,data,,UIR,,tm³ ,,,,,,,,,,,,,,,,,,,,,,,,,
-r9,kwl,LuftmengeFilterSchwellwert,01,,7c,4050,1c,data,,UIR,,tm³ ,,,,,,,,,,,,,,,,,,,,,,,,,
-r9,kwl,BetriebsstundenTotal,,,7c,4050,24,aktuell,,UIR,-5,h,,,,UIR,,,,,,UIR,,,,,,UIR,,,,,,UIR,,,
-r9,kwl,FilterStatus,undef,,7c,4022,18,data,,UIR,0=Clean;1=Dirty,,filterstatus ,,,,,,,,,,,,,,,,,,,,,,,,,
-r9,kwl,LuftmengeTotal,,,7c,4050,25,aktuell,,UIR,-1000,m³,,,,UIR,,,,,,UIR,,,,,,UIR,,,,,,UIR,,,
+r9,,TageMitFilter,,,,4050,22,,,UIR,,bei 90 Tagen kommt Filterwarnung 
+r9,,LuftmengeMitFilter,,,,4050,23,,,UIR,,tm³ 
+r9,,LuftmengeFilterSchwellwert,,,,4050,1c,,,UIR,,tm³ 
+r9,,BetriebsstundenTotal,,,,4050,24,,,UIR,-5,h,,,,UIR,,,,,,UIR,,,,,,UIR,,,,,,UIR
+r9,,LuftmengeTotal,,,,4050,25,,,UIR,-1000,m³,,,,UIR,,,,,,UIR,,,,,,UIR,,,,,,UIR
 
 #### KONFIGURATION AENDERN ####
-w,kwl,w_LuftmengeStufe0,408001,,7c,4080,21,data,,UIR,,m³/h ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_LuftmengeStufe1,408001,,7c,4080,01,data,,UIR,,m³/h ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_LuftmengeStufe2,408001,,7c,4080,02,data,,UIR,,m³/h ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_LuftmengeStufe3,408001,,7c,4080,03,data,,UIR,,m³/h ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_BypassTemperatur,408001,,7c,4080,04,data,,UIR,10,°C ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_BypassHysterese,408003,,7c,4080,30,data,,UIR,10,°C ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_Bypassbetrieb,408003,,7c,4080,1b,data,,UIR,0=auto;1=geschlossen;2=geöffnet ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_VorheizRegister_an,408003,,7c,4080,31,data,,UIR,0=nein;1=ja ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_ZentralheizungWRG,408007,,7c,4080,07,data,,UIR,0=AUS;1=EIN ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_UngleichgewichtMoeglich,408008,,7c,4080,08,data,,UIR,0=NICHT ZULÄSSIG;1=ZULÄSSIG ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_StaendigesUngleichgewicht,408009,,7c,4080,09,data,,SIR,,m³/h ,,,,,,,,,,,,,,,,,,,,,,,,,
-# w,kwl,w_Ventilatorbetrieb,40a1000200,,7c,40a1,00,data,m,UCH,,,,byp,s,BI4,0=BYPASS AUS;1=BYPASS EIN,,,frost,s,BI2,0=FROST AUS;1=FROST EIN ,,,,,,,,,,,,,,,,,,,,,,,,,
-w,kwl,w_Ventilatorbetrieb,40a1000200,,7c,40a1,00,data,,UIR,0=Feuchteschutz;1=Reduziert;2=Normal;3=Intensiv ,,,,,,,,,,,,,,,,,,,,,,,,,
+w,,w_LuftmengeStufe0,408001,,,4080,21,,,UIR,,m³/h
+w,,w_LuftmengeStufe1,408001,,,4080,01,,,UIR,,m³/h
+w,,w_LuftmengeStufe2,408001,,,4080,02,,,UIR,,m³/h
+w,,w_LuftmengeStufe3,408001,,,4080,03,,,UIR,,m³/h
+w,,w_BypassTemperatur,408001,,,4080,04,,,UIR,10,°C
+w,,w_BypassHysterese,408003,,,4080,30,,,UIR,10,°C
+w,,w_Bypassbetrieb,408003,,,4080,1b,,,UIR,0=auto;1=geschlossen;2=geoeffnet
+w,,w_VorheizRegister_an,408003,,,4080,31,,,UIR,0=nein;1=ja
+w,,w_ZentralheizungWRG,408007,,,4080,07,,,UIR,0=aus;1=ein
+w,,w_UngleichgewichtMoeglich,408008,,,4080,08,,,UIR,0=nicht zulaessig;1=zulaessig
+w,,w_StaendigesUngleichgewicht,408009,,,4080,09,,,SIR,,m³/h
+w,,w_Ventilatorbetrieb,40a1000200,,,40a1,00,,,UIR,0=Feuchteschutz;1=Reduziert;2=Normal;3=Intensiv
 
 #### SENSORDATEN ####
-r2,kwl,Feuchte,402220,,7c,4022,20,data,,UIR,10,% ,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,SoftwareVersion,,,7c,4022,00,,,STR:*,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,Ventilatorbetrieb,,,7c,4022,01,,,UIR,0=Feuchteschutz;1=Reduziert;2=Normal;3=Intensiv,,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,TatsaechlicheDrehzahlZuluft,,,7c,4022,02,,,UIR,,rpm,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,TatsaechlicheDrehzahlAbluft,,,7c,4022,03,,,UIR,,rpm,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,Ablufttemperatur,,,7c,4022,07,,,SIR,10,°C,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,Aussenlufttemperatur,,,7c,4022,08,,,SIR,10,°C,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,TatsaechlicheZuluftmenge,,,7c,4022,0b,,,UIR,,m³/h,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,TatsaechlicheAbluftmenge,,,7c,4022,0c,,,UIR,,m³/h,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,IstwertZuluftdruck,,,7c,4022,14,,,UIR,10,Pa,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,IstwertAbluftdruck,,,7c,4022,15,,,UIR,10,Pa,,,,,,,,,,,,,,,,,,,,,,,,,
+r9,,Feuchte,40220120,,,4022,20,,,UIR,10,% ,RelativeHumidity
+r9,,FeuchtigkeitsSteigerung,40220121,,,4022,21,,,UIR,0=Error;1=Not Initialized;2=Sensor Not Active;3=PowerUp Delay;4=Normal RH;5=Boost Rising;6=Boost Stable;7=Boost Decending,,HumidityBoostState
+r9,,SoftwareVersion,40220100,,,4022,00,,,STR:*,,,SoftwareVersion
+r1,,Ventilatorbetrieb,40220101,,,4022,01,,,UIR,0=Feuchteschutz;1=Reduziert;2=Normal;3=Intensiv,,FanMode
+r2,,TatsaechlicheDrehzahlZuluft,40220102,,,4022,02,,,UIR,,rpm,InletFanSpeed
+r2,,TatsaechlicheDrehzahlAbluft,40220103,,,4022,03,,,UIR,,rpm,ExhaustFanSpeed
+r2,,Ablufttemperatur,40220107,,,4022,07,,,SIR,10,°C,InsideTemperature
+r2,,Aussenlufttemperatur,40220108,,,4022,08,,,SIR,10,°C,OutsideTemperature
+r2,,TatsaechlicheZuluftmenge,4022010B,,,4022,0b,,,UIR,,m³/h,InletFlow
+r2,,TatsaechlicheAbluftmenge,4022010C,,,4022,0c,,,UIR,,m³/h,ExhaustFlow
+r2,,IstwertZuluftdruck,40220114,,,4022,14,,,UIR,10,Pa,PressureInlet
+r2,,IstwertAbluftdruck,40220115,,,4022,15,,,UIR,10,Pa,PressureExhaust
+r9,,FilterStatus,40220118,,,4022,18,,,UIR,0=Clean;1=Dirty,,FilterStatus
+r,,CO2Sensor1Status,40220128,,,4022,28,,,UIR,,,CO2Sensor1Status
+r,,CO2Sensor1Value,40220129,,,4022,29,,,UIR,,,CO2Sensor1Value
+r,,CO2Sensor2Status,4022012A,,,4022,2a,,,UIR,,,CO2Sensor2Status
+r,,CO2Sensor2Value,4022012B,,,4022,2b,,,UIR,,,CO2Sensor2Value
+r,,CO2Sensor3Status,4022012C,,,4022,2c,,,UIR,,,CO2Sensor3Status
+r,,CO2Sensor3Value,4022012D,,,4022,2d,,,UIR,,,CO2Sensor3Value
+r,,CO2Sensor4Status,4022012E,,,4022,2e,,,UIR,,,CO2Sensor4Status
+r,,CO2Sensor4Value,4022012F,,,4022,2f,,,UIR,,,CO2Sensor4Value
 
 #### SONSTIGES ####
-r9,kwl,Errors,409000,,7c,4090,00,undef,s,UCH,,,,ign,,IGN:2,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,
-#w,kwl,reseterrors,409103FFFFFF,,7c,4091,7c0001,data,m,HEX:3,,,,result,s,UIR,0=ResetNotRequestet;1=ResetSuccessful;2=ResetRelayed;3=NoErrorsFound;4=ResetFailed;5=BlockingErrors;6=UnknownResult
-#w,kwl,resetfilter,409103FFFFFF,,7c,4091,7c0100,data,,,,,,result,s,UIR,0=ResetNotRequestet;1=ResetSuccessful;2=ResetRelayed;3=FilterWarningWasNotSet;4=ResetFailed;5=UnknownResult
-r2,kwl,WertDIPSchalter,,,7c,4022,04,,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r9,kwl,PosStufenschalter,undef,,7c,4022,06,data,,UIR,,,switchposition ,,,,,,,,,,,,,,,,,,,,,,,,,
-r9,kwl,LuefterStatus,undef,,7c,4022,11,data,,UIR,0=Initialize;1=Const. Flow;2=Const. RPM;3=Off;4=Error,,lueferstatus ,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,Zuluftmenge,,,7c,4022,09,,,UIR,,m³/h,,,,,,,,,,,,,,,,,,,,,,,,,
-r2,kwl,Abluftmenge,,,7c,4022,0a,,,UIR,,m³/h,,,,,,,,,,,,,,,,,,,,,,,,,
-r9,kwl,Bypassstrom,undef,,7c,4022,0D,data,,UIR,,,bypasscurrent ,,,,,,,,,,,,,,,,,,,,,,,,,
-r3,kwl,StatusBypass,undef,,7c,4022,0E,data,,UIR,0=Initialize;1=Opening;2=Closing;3=Open;4=Closed;5=Error,,bypassstatus ,,,,,,,,,,,,,,,,,,,,,,,,,
-r3,kwl,StatusVorheizregister,undef,,7c,4022,0F,data,,UIR,0=Initialize;1=Disabled;2=Enabled,,preheaterstatus ,,,,,,,,,,,,,,,,,,,,,,,,,
-r3,kwl,LeistungVorheizregister,undef,,7c,4022,10,data,,UIR,,,preheaterpower ,,,,,,,,,,,,,,,,,,,,,,,,,
-r3,kwl,StatusNachheizregister,undef,,7c,4022,1d,data,,UIR,0=Initialize;1=Disabled;2=Enabled,,postheaterstatus ,,,,,,,,,,,,,,,,,,,,,,,,,
-r3,kwl,LeistungNachheizregister,undef,,7c,4022,1e,data,,UIR,,,postheaterpower ,,,,,,,,,,,,,,,,,,,,,,,,,
-r3,kwl,FrostStatus,undef,,7c,4022,16,data,,UIR,0=Initialize;1=No Frost;2=Defrost Wait;3=Heater;4=Error;5=Velu Heater;6=Velu Unbalance;7=Unbalanace,,froststatus ,,,,,,,,,,,,,,,,,,,,,,,,,
-r3,kwl,FeuchtigkeitsSteigerung,undef,,7c,4022,21,data,,UIR,0=Error;1=Not Initialized;2=Sensor Not Active;3=PowerUp Delay;4=Normal RH;5=Boost Rising;6=Boost Stable;7=Boost Decending,,humiditybooststate ,,,,,,,,,,,,,,,,,,,,,,,,,
-r3,kwl,eBusSynchFehler,,,7c,4022,64,,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
+r9,,Errors,409000,,,4090,00,,s,UCH,,,,ign,,IGN:2,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH
+#w,,reseterrors,409103FFFFFF,,,4091,7c0001,,m,HEX:3,,,,result,s,UIR,0=ResetNotRequested;1=ResetSuccessful;2=ResetRelayed;3=NoErrorsFound;4=ResetFailed;5=BlockingErrors;6=UnknownResult
+#w,,resetfilter,409103FFFFFF,,,4091,7c0100,,,,,,,result,s,UIR,0=ResetNotRequested;1=ResetSuccessful;2=ResetRelayed;3=FilterWarningWasNotSet;4=ResetFailed;5=UnknownResult
+r9,,PosStufenschalter,,,,4022,06,,,UIR,,,switchposition
+r2,,WertDIPSchalter,40220104,,,4022,04,,,UIR,,,DipswitchValue
+r9,,LuefterStatus,40220111,,,4022,11,,,UIR,0=Initialize;1=Const. Flow;2=Const. RPM;3=Off;4=Error,,FanStatus
+r9,,SollZuluftmenge,40220109,,,4022,09,,,UIR,,m³/h,SettingInletFlow
+r9,,SollAbluftmenge,4022010A,,,4022,0a,,,UIR,,m³/h,SettingExhaustFlow
+r9,,Bypassstrom,4022010D,,,4022,0D,,,UIR,,,BypassCurrent
+r5,,StatusBypass,4022010E,,,4022,0E,,,UIR,0=Initialize;1=Opening;2=Closing;3=Open;4=Closed;5=Error,,BypassStatus
+r5,,StatusVorheizregister,4022010F,,,4022,0F,,,UIR,0=Initialize;1=Disabled;2=Enabled,,PreheaterStatus
+r5,,LeistungVorheizregister,40220110,,,4022,10,,,UIR,,,PreheaterPower
+r5,,StatusNachheizregister,4022011D,,,4022,1d,,,UIR,0=Initialize;1=Disabled;2=Enabled,,PostheaterStatus
+r5,,LeistungNachheizregister,4022011E,,,4022,1e,,,UIR,,,PostheaterPower
+r5,,FrostStatus,40220116,,,4022,16,,,UIR,0=Initialize;1=No Frost;2=Defrost Wait;3=Heater;4=Error;5=Velu Heater;6=Velu Unbalance;7=Unbalanace,,FrostStatus
+r9,,eBusSynchFehler,40220164,,,4022,64,,,UIR,,,EbusSyncGenErrorCount
+r9,,PerilexPosition,40220105,,,4022,05,,,UIR,,,PerilexPosition
+r9,,Contact1Position,4022011B,,,4022,1b,,,UIR,,,Contact1Position
+r9,,Contact2Position,4022011C,,,4022,1c,,,UIR,,,Contact2Position
+r9,,EWTStatus,4022011F,,,4022,1f,,,UIR,,,EWTStatus
+r9,,OptionTemperature,4022011A,,,4022,1a,,,UIR,,,OptionTemperature
 
 #### UNDEFINIERT ####
-#r,,undef_01,undef,,,,0a,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_02,undef,,,,0b,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_03,undef,,,,0c,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_04,undef,,,,0d,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_05,undef,,,,0e,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_06,undef,,,,0f,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_07,undef,,,,10,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_08,undef,,,,11,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_09,undef,,,,12,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_10,undef,,,,13,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_11,undef,,,,14,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_12,undef,,,,15,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_13,undef,,,,16,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_14,undef,,,,17,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_15,undef,,,,18,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_16,undef,,,,19,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_17,undef,,,,32,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-#r,,undef_18,undef,,,,33,data,,HEX:10 ,,,,,,,,,,,,,,,,,,,,,,,,,
-
-### UNSORTIERT ###
-r,kwl,PerilexPosition,,,7c,4022,05,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,Contact1Position,,,7c,4022,1b,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,Contact2Position,,,7c,4022,1c,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,EWTStatus,,,7c,4022,1f,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,OptionTemperature,,,7c,4022,1a,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,CO2Sensor1Status,,,7c,4022,28,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,CO2Sensor1Value,,,7c,4022,29,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,CO2Sensor2Status,,,7c,4022,2a,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,CO2Sensor2Value,,,7c,4022,2b,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,CO2Sensor3Status,,,7c,4022,2c,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,CO2Sensor3Value,,,7c,4022,2d,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,CO2Sensor4Status,,,7c,402e,28,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
-r,kwl,CO2Sensor4Value,,,7c,402f,29,data,,UIR,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#r,,undef_01,undef,,,,0a,,,HEX:10
+#r,,undef_02,undef,,,,0b,,,HEX:10
+#r,,undef_03,undef,,,,0c,,,HEX:10
+#r,,undef_04,undef,,,,0d,,,HEX:10
+#r,,undef_05,undef,,,,0e,,,HEX:10
+#r,,undef_06,undef,,,,0f,,,HEX:10
+#r,,undef_07,undef,,,,10,,,HEX:10
+#r,,undef_08,undef,,,,11,,,HEX:10
+#r,,undef_09,undef,,,,12,,,HEX:10
+#r,,undef_10,undef,,,,13,,,HEX:10
+#r,,undef_11,undef,,,,14,,,HEX:10
+#r,,undef_12,undef,,,,15,,,HEX:10
+#r,,undef_13,undef,,,,16,,,HEX:10
+#r,,undef_14,undef,,,,17,,,HEX:10
+#r,,undef_15,undef,,,,18,,,HEX:10
+#r,,undef_16,undef,,,,19,,,HEX:10
+#r,,undef_17,undef,,,,32,,,HEX:10
+#r,,undef_18,undef,,,,33,,,HEX:10
