@@ -41,6 +41,8 @@ w,,LuftmengeStufe1,408001,,,4080,01,,,UIR,,m³/h
 w,,LuftmengeStufe2,408001,,,4080,02,,,UIR,,m³/h
 w,,LuftmengeStufe3,408001,,,4080,03,,,UIR,,m³/h
 w,,BypassTemperatur,408001,,,4080,04,,,UIR,10,°C
+w,,EWTT-,408001,,,4080,19,,,UIR,10,°C
+w,,EWTT+,408001,,,4080,1A,,,UIR,10,°C
 w,,BypassHysterese,408003,,,4080,30,,,UIR,10,°C
 w,,Bypassbetrieb,408003,,,4080,1b,,,UIR,0=auto;1=geschlossen;2=geoeffnet
 w,,VorheizRegister_an,408003,,,4080,31,,,UIR,0=nein;1=ja
@@ -88,11 +90,13 @@ r,,LeistungVorheizregister,40220110,,,4022,10,,,UIR,,,PreheaterPower
 r,,StatusNachheizregister,4022011D,,,4022,1d,,,UIR,0=Initialize;1=Disabled;2=Enabled,,PostheaterStatus
 r,,LeistungNachheizregister,4022011E,,,4022,1e,,,UIR,,,PostheaterPower
 r,,FrostStatus,40220116,,,4022,16,,,UIR,0=Initialize;1=No Frost;2=Defrost Wait;3=Heater;4=Error;5=Velu Heater;6=Velu Unbalance;7=Unbalanace,,FrostStatus
-r,,eBusSynchFehler,40220164,,,4022,64,,,UIR,,,EbusSyncGenErrorCount
+r,,eBusSyncFehler,40220164,,,4022,64,,,UIR,,,EbusSyncGenErrorCount
 r,,PerilexPosition,40220105,,,4022,05,,,UIR,,,PerilexPosition
 r,,Contact1Position,4022011B,,,4022,1b,,,UIR,,,Contact1Position
 r,,Contact2Position,4022011C,,,4022,1c,,,UIR,,,Contact2Position
-r,,EWTStatus,4022011F,,,4022,1f,,,UIR,,,EWTStatus
+r,,EWTStatus,4022011F,,,4022,1f,,,UIR,0=Enabled;1=Disabled,,EWTStatus
+r,,EWTT-,40500119,,,4050,19,aktuell,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,Schrittgroesse,,SIR,10,°C,,Werkseinstellung,,SIR,10,°C
+r,,EWTT+,4050011A,,,4050,1A,aktuell,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,Schrittgroesse,,SIR,10,°C,,Werkseinstellung,,SIR,10,°C
 r,,OptionTemperature,4022011A,,,4022,1a,,,UIR,,,OptionTemperature
 
 #### UNDEFINIERT ####
@@ -111,6 +115,4 @@ r,,OptionTemperature,4022011A,,,4022,1a,,,UIR,,,OptionTemperature
 #r,,undef_13,undef,,,,16,,,HEX:10
 #r,,undef_14,undef,,,,17,,,HEX:10
 #r,,undef_15,undef,,,,18,,,HEX:10
-#r,,undef_16,undef,,,,19,,,HEX:10
-#r,,undef_17,undef,,,,32,,,HEX:10
-#r,,undef_18,undef,,,,33,,,HEX:10
+
