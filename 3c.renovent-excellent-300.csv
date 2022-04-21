@@ -84,8 +84,8 @@ r1,,LuefterStatus,40220111,,,4022,11,,,UIR,0=Initialize;1=Const. Flow;2=Const. R
 r1,,SollZuluftmenge,40220109,,,4022,09,,,UIR,,m³/h,SettingInletFlow
 r1,,SollAbluftmenge,4022010A,,,4022,0a,,,UIR,,m³/h,SettingExhaustFlow
 r1,,Bypassstrom,4022010D,,,4022,0D,,,UIR,,,BypassCurrent
-r1,,StatusBypass,4022010E,,,4022,0E,,,UIR,0=Initialize;1=Opening;2=Closing;3=Open;4=Closed;5=Error,,BypassStatus
-r1,,StatusVorheizregister,4022010F,,,4022,0F,,,UIR,0=Initialize;1=Disabled;2=Enabled,,PreheaterStatus
+r1,,StatusBypass,4022010E,,,4022,0E,,,UIR,0=Initialize;1=Opening;2=Closing;3=Open;4=Closed;5=Error;255=Unknown,,BypassStatus
+r1,,StatusVorheizregister,4022010F,,,4022,0F,,,UIR,0=Initialize;1=Disabled;2=Enabled;3=Testmode;255=Unknown,,PreheaterStatus
 r1,,LeistungVorheizregister,40220110,,,4022,10,,,UIR,,,PreheaterPower
 r1,,StatusNachheizregister,4022011D,,,4022,1d,,,UIR,0=Initialize;1=Disabled;2=Enabled,,PostheaterStatus
 r1,,LeistungNachheizregister,4022011E,,,4022,1e,,,UIR,,,PostheaterPower
@@ -94,7 +94,7 @@ r1,,eBusSyncFehler,40220164,,,4022,64,,,UIR,,,EbusSyncGenErrorCount
 r1,,PerilexPosition,40220105,,,4022,05,,,UIR,,,PerilexPosition
 r1,,Contact1Position,4022011B,,,4022,1b,,,UIR,,,Contact1Position
 r1,,Contact2Position,4022011C,,,4022,1c,,,UIR,,,Contact2Position
-r1,,EWTStatus,4022011F,,,4022,1f,,,UIR,0=Enabled;1=Disabled,,EWTStatus
+r1,,EWTStatus,4022011F,,,4022,1f,,,UIR,2=Precool;1=Disabled;0=Preheat,,EWTStatus
 r1,,EWTT-,40500119,,,4050,19,aktuell,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,Schrittgroesse,,SIR,10,°C,,Werkseinstellung,,SIR,10,°C
 r1,,EWTT+,4050011A,,,4050,1A,aktuell,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,Schrittgroesse,,SIR,10,°C,,Werkseinstellung,,SIR,10,°C
 r1,,OptionTemperature,4022011A,,,4022,1a,,,UIR,,,OptionTemperature
