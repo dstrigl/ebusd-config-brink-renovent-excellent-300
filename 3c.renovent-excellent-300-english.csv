@@ -1,0 +1,117 @@
+# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment,field2,part (m/s),datatypes/templates ,divider/values,unit,comment,field3,part (m/s),datatypes/templates,divider/values,unit,comment,field4,part (m/s),datatypes/templates,divider/values,unit,comment,field5,part (m/s),datatypes/templates,divider/values,unit,comment
+### BRINK RENOVENT EXCELLENT 300 & 400 (plus)
+##
+## This ebus config may work for Ubbink, VisionAIR, WOLF CWL series and some other systems that are identical
+## You may need to modify the 7c address in the next 2 lines for your brand/model. Or just uncomment the necessary lines.
+
+## Renovent Excellent 400 (plus) series
+## *r,kwl,,,,7c,4050,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+## *w,kwl,,,,7c,4050,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+## Renovent Excellent 300 series
+*r,kwl,,,,3c,4050,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+*w,kwl,,,,3c,4050,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+#### CURRENT CONFIGURATION ####
+r1,,AirFlowLevel0,,,,4050,21,current,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,StepSize,,UIR,,m³/h,,FactorySetting,,UIR,,m³/h
+r1,,AirFlowLevel1,,,,4050,01,current,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,StepSize,,UIR,,m³/h,,FactorySetting,,UIR,,m³/h
+r1,,AirFlowLevel2,,,,4050,02,current,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,StepSize,,UIR,,m³/h,,FactorySetting,,UIR,,m³/h
+r1,,AirFlowLevel3,,,,4050,03,current,,UIR,,m³/h,,minimum,,UIR,,m³/h,,maximum,,UIR,,m³/h,,StepSize,,UIR,,m³/h,,FactorySetting,,UIR,,m³/h
+r1,,BypassTemperature,,,,4050,04,current,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,StepSize,,SIR,10,°C,,FactorySetting,,SIR,10,°C
+r1,,BypassHysteresis,,,,4050,30,current,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,StepSize,,SIR,10,°C,,FactorySetting,,SIR,10,°C
+r1,,BypassOperation,,,,4050,1b,current,,UIR,0=Auto;1=Closed;2=Open,,,minimum,,UIR,,,,maximum,,UIR,,,,StepSize,,UIR,,,,FactorySetting,,UIR
+r1,,CentralHeatingWRG,,,,4050,07,current,s,UIR,0=off;1=on,,,minimum,,UIR,,,,maximum,,UIR,,,,StepSize,,UIR,,,,FactorySetting,,UIR
+r1,,PressureImbalanceAllowed,,,,4050,08,current,s,UIR,0=not permitted;1=permitted,,,minimum,,UIR,,,,maximum,,UIR,,,,StepSize,,UIR,,,,FactorySetting,,UIR
+r1,,FixedPressureImbalance,,,,4050,09,current,,SIR,,m³/h,,minimum,,SIR,,m³/h,,maximum,,SIR,,m³/h,,StepSize,,SIR,,m³/h,,FactorySetting,,SIR,,m³/h
+r1,,RHSensorPresent,,,,4050,32,current,,UIR,,,,minimum,,UIR,,,,maximum,,UIR,,,,StepSize,,UIR,,,,FactorySetting,,UIR,,
+r1,,RHSensorSensitivity,,,,4050,33,current,,SIR,,,,minimum,,SIR,,,,maximum,,SIR,,,,StepSize,,SIR,,,,FactorySetting,,SIR
+r1,,LightingDisplay,,,,4050,1d,current,,UIR,,%,,minimum,,UIR,,%,,maximum,,UIR,,%,,StepSize,,UIR,,%,,FactorySetting,,UIR,,%
+r1,,PreheatRegister_inst,,,,4050,31,current,,UIR,1=yes;0=no
+
+#### FILTERS AND RUNTIMES ####
+r1,,DaysWithFilter,,,,4050,22,,,UIR,,at 90 days comes filter warning
+r1,,AirflowWithFilter,,,,4050,23,,,UIR,,tm³ 
+r1,,AirFlowFilterThreshold,,,,4050,1c,,,UIR,,tm³ 
+r1,,OperatingHoursTotal,,,,4050,24,,,UIR,-5,h,,,,UIR,,,,,,UIR,,,,,,UIR,,,,,,UIR
+r1,,AirflowTotal,,,,4050,25,,,UIR,-1000,m³,,,,UIR,,,,,,UIR,,,,,,UIR,,,,,,UIR
+
+#### CHANGE CONFIGURATION ####
+w,,AirFlowLevel0,408001,,,4080,21,,,UIR,,m³/h
+w,,AirFlowLevel1,408001,,,4080,01,,,UIR,,m³/h
+w,,AirFlowLevel2,408001,,,4080,02,,,UIR,,m³/h
+w,,AirFlowLevel3,408001,,,4080,03,,,UIR,,m³/h
+w,,BypassTemperature,408001,,,4080,04,,,UIR,10,°C
+w,,EWTT-,408001,,,4080,19,,,UIR,10,°C
+w,,EWTT+,408001,,,4080,1A,,,UIR,10,°C
+w,,BypassHysteresis,408003,,,4080,30,,,UIR,10,°C
+w,,BypassOperation,408003,,,4080,1b,,,UIR,0=Auto;1=Closed;2=Open
+w,,PreheatRegister_an,408003,,,4080,31,,,UIR,0=no;1=yes
+w,,CentralHeatingWRG,408007,,,4080,07,,,UIR,0=off;1=yes
+w,,PressureImbalanceAllowed,408008,,,4080,08,,,UIR,0=not permitted;1=permitted
+w,,FixedPressureImbalance,408009,,,4080,09,,,SIR,,m³/h
+w,,FanSpeed,,,,40a1,,,,ULR,0x0=Min;0x00010001=Low;0x00020002=Medium;0x00030003=High,,,,,IGN:1
+
+#### SENSOR DATA ####
+r1,,Humidity,40220120,,,4022,20,,,UIR,10,% ,RelativeHumidity
+r1,,MoistureIncrease,40220121,,,4022,21,,,UIR,0=Error;1=Not Initialized;2=Sensor Not Active;3=PowerUp Delay;4=Normal RH;5=Boost Rising;6=Boost Stable;7=Boost Decending,,HumidityBoostState
+r1,,SoftwareVersion,40220100,,,4022,00,,,STR:*,,,SoftwareVersion
+r1,,FanSpeed,40220101,,,4022,01,,,UIR,0=Min;1=Low;2=Medium;3=High,,FanMode
+r1,,ActualSpeedOfSupplyAir,40220102,,,4022,02,,,UIR,,rpm,InletFanSpeed
+r1,,ActualSpeedOfExhaustAir,40220103,,,4022,03,,,UIR,,rpm,ExhaustFanSpeed
+r1,,ExhaustAirTemperature,40220107,,,4022,07,,,SIR,10,°C,InsideTemperature
+r1,,OutsideAirTemperature,40220108,,,4022,08,,,SIR,10,°C,OutsideTemperature
+r1,,IntakeAirVolume,4022010B,,,4022,0b,,,UIR,,m³/h,InletFlow
+r1,,ExhaustAirVolume,4022010C,,,4022,0c,,,UIR,,m³/h,ExhaustFlow
+r1,,IntakeAirPressure,40220114,,,4022,14,,,UIR,10,Pa,PressureInlet
+r1,,ExhaustAirPressure,40220115,,,4022,15,,,UIR,10,Pa,PressureExhaust
+r1,,FilterStatus,40220118,,,4022,18,,,UIR,0=Clean;1=Dirty,,FilterStatus
+r1,,CO2Sensor1Status,40220128,,,4022,28,,,UIR,,,CO2Sensor1Status
+r1,,CO2Sensor1Value,40220129,,,4022,29,,,UIR,,,CO2Sensor1Value
+r1,,CO2Sensor2Status,4022012A,,,4022,2a,,,UIR,,,CO2Sensor2Status
+r1,,CO2Sensor2Value,4022012B,,,4022,2b,,,UIR,,,CO2Sensor2Value
+r1,,CO2Sensor3Status,4022012C,,,4022,2c,,,UIR,,,CO2Sensor3Status
+r1,,CO2Sensor3Value,4022012D,,,4022,2d,,,UIR,,,CO2Sensor3Value
+r1,,CO2Sensor4Status,4022012E,,,4022,2e,,,UIR,,,CO2Sensor4Status
+r1,,CO2Sensor4Value,4022012F,,,4022,2f,,,UIR,,,CO2Sensor4Value
+
+#### OTHER ####
+r1,,Errors,409000,,,4090,00,,s,UCH,,,,ign,,IGN:2,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH,,,,code,,UCH
+#w,,reseterrors,409103FFFFFF,,,4091,7c0001,,m,HEX:3,,,,result,s,UIR,0=ResetNotRequested;1=ResetSuccessful;2=ResetRelayed;3=NoErrorsFound;4=ResetFailed;5=BlockingErrors;6=UnknownResult
+#w,,resetfilter,409103FFFFFF,,,4091,7c0100,,,,,,,result,s,UIR,0=ResetNotRequested;1=ResetSuccessful;2=ResetRelayed;3=FilterWarningWasNotSet;4=ResetFailed;5=UnknownResult
+r1,,SwitchPosition,,,,4022,06,,,UIR,,,switchposition
+r1,,DipswitchValue,40220104,,,4022,04,,,UIR,,,DipswitchValue
+r1,,FanStatus,40220111,,,4022,11,,,UIR,0=Initialize;1=Const. Flow;2=Const. RPM;3=Off;4=Error,,FanStatus
+r1,,TargetIntakeAirVolume,40220109,,,4022,09,,,UIR,,m³/h,SettingInletFlow
+r1,,TargetExhaustAirVolume,4022010A,,,4022,0a,,,UIR,,m³/h,SettingExhaustFlow
+r1,,BypassFlow,4022010D,,,4022,0D,,,UIR,,,BypassCurrent
+r1,,BypassStatus,4022010E,,,4022,0E,,,UIR,0=Initialize;1=Opening;2=Closing;3=Open;4=Closed;5=Error;255=Unknown,,BypassStatus
+r1,,PreheaterStatus,4022010F,,,4022,0F,,,UIR,0=Initialize;1=Disabled;2=Enabled;3=Testmode;255=Unknown,,PreheaterStatus
+r1,,PreheaterPower,40220110,,,4022,10,,,UIR,,,PreheaterPower
+r1,,PostheaterStatus,4022011D,,,4022,1d,,,UIR,0=Initialize;1=Disabled;2=Enabled,,PostheaterStatus
+r1,,PostheaterPower,4022011E,,,4022,1e,,,UIR,,,PostheaterPower
+r1,,FrostStatus,40220116,,,4022,16,,,UIR,0=Initialize;1=No Frost;2=Defrost Wait;3=Heater;4=Error;5=Velu Heater;6=Velu Unbalance;7=Unbalanace,,FrostStatus
+r1,,eBusSyncError,40220164,,,4022,64,,,UIR,,,EbusSyncGenErrorCount
+r1,,PerilexPosition,40220105,,,4022,05,,,UIR,,,PerilexPosition
+r1,,Contact1Position,4022011B,,,4022,1b,,,UIR,,,Contact1Position
+r1,,Contact2Position,4022011C,,,4022,1c,,,UIR,,,Contact2Position
+r1,,EWTStatus,4022011F,,,4022,1f,,,UIR,2=Precool;1=Disabled;0=Preheat,,EWTStatus
+r1,,EWTT-,40500119,,,4050,19,current,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,StepSize,,SIR,10,°C,,FactorySetting,,SIR,10,°C
+r1,,EWTT+,4050011A,,,4050,1A,current,,SIR,10,°C,,minimum,,SIR,10,°C,,maximum,,SIR,10,°C,,StepSize,,SIR,10,°C,,FactorySetting,,SIR,10,°C
+r1,,OptionTemperature,4022011A,,,4022,1a,,,UIR,,,OptionTemperature
+
+#### UNDEFINIERT ####
+#r,,undef_01,undef,,,,0a,,,HEX:10
+#r,,undef_02,undef,,,,0b,,,HEX:10
+#r,,undef_03,undef,,,,0c,,,HEX:10
+#r,,undef_04,undef,,,,0d,,,HEX:10
+#r,,undef_05,undef,,,,0e,,,HEX:10
+#r,,undef_06,undef,,,,0f,,,HEX:10
+#r,,undef_07,undef,,,,10,,,HEX:10
+#r,,undef_08,undef,,,,11,,,HEX:10
+#r,,undef_09,undef,,,,12,,,HEX:10
+#r,,undef_10,undef,,,,13,,,HEX:10
+#r,,undef_11,undef,,,,14,,,HEX:10
+#r,,undef_12,undef,,,,15,,,HEX:10
+#r,,undef_13,undef,,,,16,,,HEX:10
+#r,,undef_14,undef,,,,17,,,HEX:10
+#r,,undef_15,undef,,,,18,,,HEX:10
