@@ -8,8 +8,8 @@
 ##
 ## For ebusd-configuration files for complete portfolio of Brink HRU units go to https://github.com/pvyleta/ebusd-brink-hru
 
-*r,Excellent300,,,,3c,
-*w,Excellent300,,,,3c,
+*r,Excellent400,,,,7c,
+*w,Excellent400,,,,7c,
 
 ## COMMON HRU COMMANDS ## (WTWCommands.cs - Some of them might not be applicable for this device, use with caution)
 w,,FactoryReset,,,,40ff,466163746f72795265736574
@@ -66,12 +66,12 @@ r,,CO2Sensor4Value,CO2Sensor4Value,,,4022,2f,,,UIR,,ppm,
 ## Configuration parameters ##
 w,,FlowMode0,FlowMode0,,,4080,21,,,SIR,,m³/h,[min:0;max:50;step:50;default:50]
 r,,FlowMode0,FlowMode0,,,4050,21,,,SIR,,m³/h,,Min,,SIR,,m³/h,[min:0],Max,,SIR,,m³/h,[max:50],Step,,SIR,,m³/h,[step:50],Default,,SIR,,m³/h,[default:50]
-w,,FlowMode1,FlowMode1,,,4080,01,,,SIR,,m³/h,[min:50;max:300;step:5;default:100]
-r,,FlowMode1,FlowMode1,,,4050,01,,,SIR,,m³/h,,Min,,SIR,,m³/h,[min:50],Max,,SIR,,m³/h,[max:300],Step,,SIR,,m³/h,[step:5],Default,,SIR,,m³/h,[default:100]
-w,,FlowMode2,FlowMode2,,,4080,02,,,SIR,,m³/h,[min:50;max:300;step:5;default:150]
-r,,FlowMode2,FlowMode2,,,4050,02,,,SIR,,m³/h,,Min,,SIR,,m³/h,[min:50],Max,,SIR,,m³/h,[max:300],Step,,SIR,,m³/h,[step:5],Default,,SIR,,m³/h,[default:150]
-w,,FlowMode3,FlowMode3,,,4080,03,,,SIR,,m³/h,[min:50;max:300;step:5;default:225]
-r,,FlowMode3,FlowMode3,,,4050,03,,,SIR,,m³/h,,Min,,SIR,,m³/h,[min:50],Max,,SIR,,m³/h,[max:300],Step,,SIR,,m³/h,[step:5],Default,,SIR,,m³/h,[default:225]
+w,,FlowMode1,FlowMode1,,,4080,01,,,SIR,,m³/h,[min:50;max:400;step:5;default:100]
+r,,FlowMode1,FlowMode1,,,4050,01,,,SIR,,m³/h,,Min,,SIR,,m³/h,[min:50],Max,,SIR,,m³/h,[max:400],Step,,SIR,,m³/h,[step:5],Default,,SIR,,m³/h,[default:100]
+w,,FlowMode2,FlowMode2,,,4080,02,,,SIR,,m³/h,[min:50;max:400;step:5;default:200]
+r,,FlowMode2,FlowMode2,,,4050,02,,,SIR,,m³/h,,Min,,SIR,,m³/h,[min:50],Max,,SIR,,m³/h,[max:400],Step,,SIR,,m³/h,[step:5],Default,,SIR,,m³/h,[default:200]
+w,,FlowMode3,FlowMode3,,,4080,03,,,SIR,,m³/h,[min:50;max:400;step:5;default:300]
+r,,FlowMode3,FlowMode3,,,4050,03,,,SIR,,m³/h,,Min,,SIR,,m³/h,[min:50],Max,,SIR,,m³/h,[max:400],Step,,SIR,,m³/h,[step:5],Default,,SIR,,m³/h,[default:300]
 w,,BypassTemp,BypassTemp,,,4080,04,,,SIR,10,°C,[min:150;max:350;step:5;default:240]
 r,,BypassTemp,BypassTemp,,,4050,04,,,SIR,10,°C,,Min,,SIR,10,°C,[min:150],Max,,SIR,10,°C,[max:350],Step,,SIR,10,°C,[step:5],Default,,SIR,10,°C,[default:240]
 w,,BypassTempHyst,BypassTempHyst,,,4080,30,,,SIR,10,°C,[min:0;max:50;step:5;default:20]
